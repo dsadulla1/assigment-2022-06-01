@@ -13,6 +13,9 @@
 1. codes/predict.py -- can be used to score any new test datasets encountered
 1. results/model.pkl -- serialized model that can be used to score/predict from the features
 1. results/test_predictions.csv -- the predictions are available for the test set data using model.pkl
+1. requirements_conda.txt -- can be used to setup the enviroment using `conda`
+1. requirements_pip.txt -- can be used to setup the enviroment using `pip`
+
 
 ## Observations
 1. The features cannot be understood as the column names are anonymized
