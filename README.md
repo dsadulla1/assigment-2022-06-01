@@ -1,4 +1,4 @@
-# Arya.ai Assignment
+# Assignment
 
 ## Problem statement 
 1. Perform Exploratory Data Analysis
@@ -49,57 +49,61 @@
 
 ------------ Training ------------
 
-              precision    recall  f1-score   support
+>                  precision    recall  f1-score   support
+>    
+>               0       0.95      0.97      0.96      1911
+>               1       0.96      0.93      0.94      1217
+>    
+>        accuracy                           0.96      3128
+>       macro avg       0.96      0.95      0.95      3128
+>       weighted avg    0.96      0.96      0.96      3128
 
-           0       0.95      0.97      0.96      1911
-           1       0.96      0.93      0.94      1217
+> ROC-AUC Score = 0.9499
 
-    accuracy                           0.96      3128
-   macro avg       0.96      0.95      0.95      3128
-weighted avg       0.96      0.96      0.96      3128
-
-ROC-AUC Score = 0.9499
-
-![](imgs%5Ctraining-confusion-matrix.png)
+![](imgs/training-confusion-matrix.png)
 
 ------------ Validation ------------
 
-              precision    recall  f1-score   support
+>                precision    recall  f1-score   support
+>    
+>               0       0.93      0.95      0.94       465
+>               1       0.93      0.90      0.91       317
+>    
+>        accuracy                           0.93       782
+>       macro avg       0.93      0.93      0.93       782
+>       weighted avg    0.93      0.93      0.93       782
 
-           0       0.93      0.95      0.94       465
-           1       0.93      0.90      0.91       317
+> ROC-AUC Score = 0.9253
 
-    accuracy                           0.93       782
-   macro avg       0.93      0.93      0.93       782
-weighted avg       0.93      0.93      0.93       782
-
-ROC-AUC Score = 0.9253
-
-![](imgs%5Cvalidation-confusion-matrix.png)
+![](imgs/validation-confusion-matrix.png)
 
 
 1. The most important features include
-   col_nm  importance
-0     X52    0.201811
-1      X7    0.122683
-2     X53    0.111047
-3     X56    0.094752
-4     X25    0.089620
-5     X21    0.084423
-6     X16    0.068855
-7     X55    0.058680
-8     X57    0.036003
-9      X5    0.027116
-10    X27    0.027044
-11    X19    0.022415
-12    X26    0.021299
-13    X46    0.019927
-14    X24    0.014324
+| index | col_nm | importance |
+| ---- | ---- | ---- |
+| 0 | X52 | 0.201811 |
+| 1 | X7 | 0.122683 |
+| 2 | X53 | 0.111047 |
+| 3 | X56 | 0.094752 |
+| 4 | X25 | 0.089620 |
+| 5 | X21 | 0.084423 |
+| 6 | X16 | 0.068855 |
+| 7 | X55 | 0.058680 |
+| 8 | X57 | 0.036003 |
+| 9 | X5 | 0.027116 |
+| 10 | X27 | 0.027044 |
+| 11 | X19 | 0.022415 |
+| 12 | X26 | 0.021299 |
+| 13 | X46 | 0.019927 |
+| 14 | X24 | 0.014324 |
+
 
 1. Why did I select Random Forest?
+
 Random Forest and other tree based ensemble models such as XGBoost are robust to Outliers, Sparsity, Non linear relationships, Missing values, Linear combination and multi-collinearity. Hence I chose Random Forest as it is simpler to implement and achieves decent performance when tuned properly. I could have selected XGBoost model as well but RF was giving a good performance so did not experiment with XGBoost but the entire process will be similar for XGBoost as well.
 
 Also since the variables names were masked there was very little feature preprocessing I could do. Hence went ahead with Random Forest model.
 
-1. Why I chose the RFE?
+2. Why I chose the RFE?
+
 After finding the right set of hyper parameters, it would be wise to reduce the number of features to remove non-contributing variables. For the same, I used the Recursive Feature Elimination process to weed out the 2 variables having the least feature importance in each iteration.
