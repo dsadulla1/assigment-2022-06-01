@@ -43,9 +43,9 @@
 
 
 ## Key Takeaways
-1. Optimal parameters of the Random Forest model were identified as 
+- Optimal parameters of the Random Forest model were identified as 
 
-1. Model achieved good average performance upon cross validation and RFE i.e. with just 15 features
+- Model achieved good average performance upon cross validation and RFE i.e. with just 15 features
 
 ------------ Training ------------
 
@@ -99,12 +99,12 @@
 |14   |X24   |0.014324  |
 
 
-1. Why did I select Random Forest?
+- Why did I select Random Forest?
 
 Random Forest and other tree based ensemble models such as XGBoost are robust to Outliers, Sparsity, Non linear relationships, Missing values, Linear combination and multi-collinearity. Hence I chose Random Forest as it is simpler to implement and achieves decent performance when tuned properly. I could have selected XGBoost model as well but RF was giving a good performance so did not experiment with XGBoost but the entire process will be similar for XGBoost as well.
 
 Also since the variables names were masked there was very little feature preprocessing I could do. Hence went ahead with Random Forest model.
 
-2. Why I chose the RFE?
+- Why I chose the RFE?
 
 After finding the right set of hyper parameters, it would be wise to reduce the number of features to remove non-contributing variables. For the same, I used the Recursive Feature Elimination process to weed out the 2 variables having the least feature importance in each iteration.
