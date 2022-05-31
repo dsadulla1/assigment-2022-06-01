@@ -29,11 +29,11 @@
 ## Process
 1. Import the datasets
 1. Performed Exploratory Data Analysis
-  1. Drift between training and test set
-  1. Target's distribution
-  1. Multi collinearity
-  1. Sparcity
-  1. Missing Info
+   1. Drift between training and test set
+   1. Target's distribution
+   1. Multi collinearity
+   1. Sparcity
+   1. Missing Info
 1. Split the train dataset into training and validation datasets
 1. Using the train datatset obtained above, perform KFold Cross Validation with accuracy as a metric
 1. Build an objective function with the Random Forest Model, along with Accuracy as the metric to maximize and finally setup hyperopt framework for hyperparameter optimization of the RF model
