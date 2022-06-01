@@ -46,8 +46,9 @@
 
 
 ## Key Takeaways
-- Optimal parameters of the Random Forest model were identified as 
-
+- Optimal parameters of the Random Forest model were identified as below
+> Best loss of -0.9386 corresponds to the following configuration:
+> {'max_depth': 9, 'min_samples_split': 11, 'n_estimators': 29, 'criterion': 'gini', 'max_samples': 0.9996310028997908, 'min_samples_leaf': 2}
 - Model achieved good average performance upon cross validation and RFE i.e. with just 15 features
 
 ------------ Training ------------
